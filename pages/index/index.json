@@ -1,0 +1,6 @@
+{
+	"usingComponents": {
+		"test-store": "/components/test-store/test-store",
+		"van-popup": "/miniprogram/miniprogram_npm/@vant/weapp/popup/index"
+	}
+}

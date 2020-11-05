@@ -1,0 +1,30 @@
+<view class="container">
+	<view class="userinfo">
+		<button 
+			wx:if="{{!$.base.hasUserInfo && $.base.canIUse}}" 
+			open-type="getUserInfo" 
+			bindgetuserinfo="getUserInfo"
+		>
+			获取头像昵称
+		</button>
+		<block wx:else>
+			<image bindtap="goTo" class="userinfo-avatar" src="{{$.base.userInfo.avatarUrl}}" mode="cover" />
+			<text class="userinfo-nickname">{{$.base.userInfo.nickName}}</text>
+		</block>
+	</view>
+	<view class="hello">
+		<view><text>Hello: {{$.base.Hello}}</text></view>
+		<view><text>reverseHello: {{reverseHello}}</text></view>
+		<view><text>newProp: {{$.base.newProp}}</text></view>
+	</view>
+	<test-store />
+	<van-popup 
+		round
+		closeable
+		show="{{welcomeVisible}}" 
+		bind:close="cancelDialogButton"
+		custom-style="width: 60%; height: 300rpx"
+	>
+		<view class="popupView">test van-popup</view>
+	</van-popup>
+</view>

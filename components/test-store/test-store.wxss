@@ -1,0 +1,5 @@
+.ctn {
+    border:1px solid #13c2c2;
+    margin: 20rpx;
+    padding: 20rpx;
+}

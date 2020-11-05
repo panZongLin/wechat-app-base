@@ -1,0 +1,4 @@
+<view class="ctn">
+	<view>logs.logsArr Length: {{logs.logsArr.length}}</view>
+	<view>wx.getStorageSync('logs').length: {{logsLength}}</view>
+</view>
